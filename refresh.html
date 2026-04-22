@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keep Alive</title>
+</head>
+<body>
+
+<h3>Keeping server awake...</h3>
+
+<script>
+  const URL = "https://astral-static-97bf.onrender.com";
+
+  setInterval(() => {
+    fetch(URL)
+      .then(() => console.log("Ping sent at " + new Date().toLocaleTimeString()))
+      .catch(err => console.log("Error:", err));
+  }, 300000); // 5 minutes
+</script>
+
+</body>
+</html>
